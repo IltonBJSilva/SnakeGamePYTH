@@ -1,8 +1,17 @@
-import pygame
+import pygame, random
 from pygame.locals import *
 
-pygame.init();
-
+pygame.init()
 #Tamanho da tela
-screen = pygames.display.set_mode((600,600))
-pygame.display.set_caption()
+screen = pygame.display.set_mode((600,600))
+#Titulo
+pygame.display.set_caption('Snake')
+
+while True:
+    #Pegar os eventos que forem feito dentro do jogo
+    for event in pygame.event.get():
+       if event.type == QUIT:
+           pygame.quit()
+
+    pygame.display.update()
+
